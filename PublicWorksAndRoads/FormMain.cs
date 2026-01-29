@@ -25,5 +25,11 @@ namespace PublicWorksAndRoads
                 MessageBox.Show(ex.Message, @"فشل الاتصال", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ButtonBuildingPermit_Click(object sender, EventArgs e)
+        {
+            var form = new FormBuildingPermit();
+            form.ShowDialog();
+        }
     }
 }
