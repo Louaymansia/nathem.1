@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -41,6 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
+    <Compile Include="Models\BuildingPermitRequest.cs" />
+    <Compile Include="Models\LandDirection.cs" />
+    <Compile Include="Models\Sketch.cs" />
+    <Compile Include="Repositories\BuildingPermitRepository.cs" />
+    <Compile Include="Repositories\LandDirectionRepository.cs" />
+    <Compile Include="Repositories\SketchRepository.cs" />
+    <Compile Include="FormBuildingPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuildingPermit.Designer.cs">
+      <DependentUpon>FormBuildingPermit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -51,6 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormBuildingPermit.resx">
+      <DependentUpon>FormBuildingPermit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
